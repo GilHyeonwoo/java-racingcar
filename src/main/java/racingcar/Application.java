@@ -64,7 +64,7 @@ public class Application {
 
     private static void printRaceStatus(List<Car> cars){
         for (Car car : cars) {
-            System.out.println(car.getName() + ":" +"-".repeat(car.getPostion()));
+            System.out.println(car.getName() + ": " +"-".repeat(car.getPostion()));
         }
         System.out.println();
     }
@@ -82,6 +82,6 @@ public class Application {
                 winners.add(car.getName());
             }
         }
-        System.out.println("최종 우승자 : " + winners);
+        System.out.println("최종 우승자 : " + String.join(", ", winners));
     }
 }
