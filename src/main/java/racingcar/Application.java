@@ -1,7 +1,9 @@
 package racingcar;
 import java.lang.*;
 import java.util.*;
+import camp.nextstep.edu.missionutils.*;
 
+import static camp.nextstep.edu.missionutils.Console.readLine;
 
 class Car{
     private String name;
@@ -37,7 +39,8 @@ public class Application {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("경주할 자동차 이름: ");
-        String[] carNames = scanner.nextLine().split(",");
+        String[] carNames = readLine().split(",");
+        //String[] carNames = scanner.nextLine().split(",");
 
         List<Car> cars = new ArrayList<>();
         for (String name : carNames) {
@@ -45,7 +48,8 @@ public class Application {
         }
 
         System.out.println("시도할 횟수: ");
-        int attempts = scanner.nextInt();
+        int attempts = Integer.parseInt(readLine());
+        //int attempts = scanner.nextInt();
 
         for (int i = 0; i < attempts; i++) {
             for (Car car : cars) {
